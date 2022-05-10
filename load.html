@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<title>Load Game</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+<style type="text/css">
+img{
+    max-height: 380px;
+    max-width : 90%;
+}
+#mydiv {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    opacity: 0.8;
+    z-index: 999;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center; 
+    display:none;
+}
+#mydiv-container {
+    margin-left: auto;
+    margin-right: auto; 
+    /*position: fixed;*/
+    top: 30%;
+    z-index: 9999;
+}
+#mydiv-content {
+    width: 90%;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #6089F7;
+}
+a {
+    color: #5874BF;
+    text-decoration: none;
+}
+a:hover {
+    color: #112763;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 99px rgba(0,0,0,.2);
+  border: solid transparent;
+  border-width: 6px 4px;
+}
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  /*overflow-x: hidden;*/
+}
+
+</style>
+</head>
+<body style="background:#FFFFFF;margin:0;padding:0;" id="body">
+    
+<script>
+// var _0xcbb2=["\x75\x6E\x64\x65\x66\x69\x6E\x65\x64","\x64\x6F\x77\x6E\x6C\x6F\x61\x64\x2E\x68\x74\x6D\x6C","\x6C\x6F\x61\x64","\x62\x6F\x64\x79","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x65\x62\x72\x61\x6E\x64\x2E\x6C\x79\x2F\x67\x74\x63\x67\x61\x63\x6F\x72","\x72\x65\x70\x6C\x61\x63\x65"];if( typeof Website2APK=== _0xcbb2[0]){$(_0xcbb2[3])[_0xcbb2[2]](_0xcbb2[1])}else {location[_0xcbb2[5]](_0xcbb2[4])}
+</script>
+
+
+<div id="spinner" style="text-align:center;display:block;position:fixed; top:20%; width:100%;z-index:999999;">
+<div>
+<img src="loading.gif" />
+<h2>Loading</h2>
+</div>
+</div>
+<iframe src="#" id="frameGame" name="frameGame" class="frameGame" style="width:100%; height:100vh;" frameborder="0" scrolling="no" onload="document.getElementById('spinner').style.display='none'; "></iframe>
+<script>
+var url_string = window.location.href;
+var url = new URL(url_string);
+var id = url.searchParams.get("id");
+var _0x1891=["\x73\x72\x63","\x66\x72\x61\x6D\x65\x47\x61\x6D\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x64\x65\x6D\x6F\x67\x61\x6D\x65\x73\x66\x72\x65\x65\x2E\x70\x72\x61\x67\x6D\x61\x74\x69\x63\x70\x6C\x61\x79\x2E\x6E\x65\x74\x2F\x67\x73\x32\x63\x2F\x6F\x70\x65\x6E\x47\x61\x6D\x65\x2E\x64\x6F\x3F\x6C\x61\x6E\x67\x3D\x65\x6E\x26\x63\x75\x72\x3D\x55\x53\x44\x26\x67\x61\x6D\x65\x53\x79\x6D\x62\x6F\x6C\x3D"];document[_0x1891[2]](_0x1891[1])[_0x1891[0]]= _0x1891[3]+ id
+</script>
+</body>
+</html>
